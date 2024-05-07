@@ -1,0 +1,142 @@
+
+{
+  "admin": [
+    {
+      "validCredential": [
+        {
+          "email": "test.admin@5day.io",
+          "password": "Test123#"
+        },
+        {
+          "loginHeader": "login",
+          "userName": "Admin",
+          "password": "admin123"
+          
+        },
+        {
+          "passwordStrength": {
+            "low": "qQ2@ww",
+            "good": "qQ2@wwww",
+            "excellent": "qQ2@wwwwsdsdsd"
+          }
+        }
+      ]
+    },
+    {
+      "invalidCredential": [
+        {
+          "email": "test.admin@5day.io",
+          "password": "est123#"
+        },
+        {
+          "email": "admin5day.io",
+          "password": "Test123#"
+        },
+        {
+          "email": "atest.admin@5day.io",
+          "password": "est12"
+        },
+        {
+          "email": "best.admin@5day.io",
+          "password": "Test12%"
+        },
+        {
+          "email": "test.admin@5day.io",
+          "password": "Aest12%"
+        },
+        {
+          "password": "dgfyhig"
+        }
+      ]
+    }
+  ],
+  "resetPassword": [
+    {
+      "validPassword": [
+        {
+          "password": "Test123#",
+          "confirmPassword": "Test123#"
+        }
+      ],
+      "invalidPassword": [
+        {
+          "password": "Test123#",
+          "confirmPassword": "Test123#"
+        }
+      ]
+    }
+  ],
+  "tenantCredential": [
+    {
+      "singleTenantCredential": [
+        {
+          "username": "johny50@yopmail.com",
+          "password": "Test123#",
+          "tenantId": "3c8ec3df-1cc7-417d-b3eb-76ebae57d14f",
+          "accountUrl": "johny500310Tenant"
+        }
+      ],
+      "multiTenantCredential": [
+        {
+          "username": "johny51@yopmail.com",
+          "password": "Test1234#",
+          "tenantId": [
+            "2a3716ab-45a4-4cc0-bdad-626695ef1d4b",
+            "3410abc5-54df-43a8-80dd-f89df75c6eea",
+            "fcd1d4fd-dfd1-41c0-8a02-66fd32bf9998"
+          ],
+          "accountUrl": [
+            "johny510310Tenant",
+            "johny520310Tenant",
+            "johny530310Tenant"
+          ]
+        }
+      ]
+    }
+  ],
+  "accountOwner": [
+    {
+      "email": "crmtest2@yopmail.com",
+      "password": "Test123#",
+      "accountUrl": "Mack771711Tenant"
+    },
+    {
+      "email": "crmtest3@yopmail.com",
+      "password": "Test123#",
+      "accountUrl": "Mack2511Tenant"
+    },
+    {
+      "email": "Mack85@yopmail.com",
+      "password": "Test123#",
+      "accountUrl": "Mack850112Tenant"
+    },
+    {
+      "email": "Mack90@yopmail.com",
+      "password": "Test123#",
+      "accountUrl": "Mack900712Tenant"
+    },
+    {
+      "email": "johny81@yopmail.com",
+      "password": "Test123#",
+      "accountUrl": "Mack771711Tenant"
+    },
+    {
+      "email": "Mack60@yopmail.com",
+      "password": "Test123#",
+      "accountUrl": "Mack601111Tenant"
+    }
+  ],
+  "forgotPassword": [
+    {
+      "updatedUserPassword": ""
+    }
+  ],
+  "updatedUserPassword": "VMIks41#",
+  "updatedAdminPassword": "",
+  "email": "test.admin@5day.io",
+    "userEmail": "chintan.mandora@rishabhsoft.com",
+    "password": "Test123#",
+    "newPassword":"Test@123",
+    "oldPassword":"Test123#"
+}
+
