@@ -1,11 +1,18 @@
 {
+<<<<<<< HEAD
   "name": "cypress-new-batch",
   "version": "1.0.0",
   "description": "",
+=======
+  "name": "newbatch",
+  "version": "1.0.0",
+  "description": "starts with new batch of cypress",
+>>>>>>> ec03d417fb6ab36268267b3132024085a2bfbe98
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+<<<<<<< HEAD
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kowshithareddy/cypress-new-batch.git"
@@ -17,4 +24,14 @@
     "url": "https://github.com/kowshithareddy/cypress-new-batch/issues"
   },
   "homepage": "https://github.com/kowshithareddy/cypress-new-batch#readme"
+=======
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.7.1"
+  },
+  "devDependencies": {
+    "cypress-xpath": "^2.0.1"
+  }
+>>>>>>> ec03d417fb6ab36268267b3132024085a2bfbe98
 }
