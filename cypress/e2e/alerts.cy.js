@@ -4,7 +4,7 @@ describe('Automation - Working with Alerts', function () {
         cy.visit("https://the-internet.herokuapp.com/javascript_alerts");
 
     })
-    // neway
+    // newaya
 
     it('Cypress Test Case - Simple Alert', function () {
 
