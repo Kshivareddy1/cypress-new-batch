@@ -2,11 +2,14 @@ describe("dropdown_checkbox_Radiobutton", () => {
     it("validate the inputbox", () => {
         // visit the url
         cy.visit("https://register.rediff.com/register/register.php")
+        cy.url().should('contains','register')
+        cy.url().should('includes','rediff')
+        cy.url().should('eq','https://register.rediff.com/register/register.php')
 
-        // assert the table element
-        cy.get('[id="tblcrtac"]').should('have.id', 'tblcrtac')
-        cy.get('[id="tblcrtac"]').should('have.class', 'f14')
-
+        // assert the table element with chain assertion
+        cy.get('[id="tblcrtac"]').should('have.id', 'tblcrtac').and('have.class', 'f14')
+        // cy.get('[id="tblcrtac"]').should('have.class', 'f14')
+cy.pause()
         // type the input field
         cy.contains('Full Name').should('have.text', 'Full Name')
 
