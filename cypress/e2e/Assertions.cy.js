@@ -2,23 +2,24 @@ describe("dropdown_checkbox_Radiobutton", () => {
     it("validate the inputbox", () => {
         // visit the url
         cy.visit("https://register.rediff.com/register/register.php")
-        cy.url().should('contains','register')
-        cy.url().should('includes','rediff')
-        cy.url().should('eq','https://register.rediff.com/register/register.php')
+        cy.url().should('contains', 'register')
+        cy.url().should('includes', 'rediff')
+        cy.url().should('eq', 'https://register.rediff.com/register/register.php')
 
         // assert the table element with chain assertion
         cy.get('[id="tblcrtac"]').should('have.id', 'tblcrtac').and('have.class', 'f14')
         // cy.get('[id="tblcrtac"]').should('have.class', 'f14')
-cy.pause()
+        // cy.pause()
         // type the input field
         cy.contains('Full Name').should('have.text', 'Full Name')
 
-        // verify the assertion with expect
-        cy.get('[name^="DOB_Month"] [value="02"]').then((txt) => {
-            let x = txt.text();
+        // verify the assertion with expect'
+        cy.get('[name^="DOB_Month"] [value="02"]').invoke('text').then((txt) => {
+            let x = txt;
             cy.log(x)
             expect(x).to.equal('FEB')
         })
+        // cy.pause()
 
         // cy.get('[name^="DOB_Month"] [value="02"]').then((elelength) => {
         //     var lengthcount = elelength.text()
@@ -29,7 +30,8 @@ cy.pause()
         //     // expect(lengthcount).to.be.within(600, 700)
         //   })
 
-        cy.get('input[name^="name"]').type("username")
+        cy.get('input[name^="name"]').type("username").blur()
+        // cy.pause()
         // cy.get('[value="Check availability"]').click()
         cy.get('[type="button"]').eq(0).click()
         cy.get('#check_availability > font > b').should('have.text', 'The ID cannot be blank. Please choose your desired ID.')
@@ -39,7 +41,7 @@ cy.pause()
             cy.log(y)
             expect(y).to.equal('The ID cannot be blank. Please choose your desired ID.')
         })
-        cy.pause()
+        // cy.pause()
 
         // selecting the checkbox
         cy.get('[type="checkbox"]').check().should('be.checked')
@@ -55,8 +57,9 @@ cy.pause()
         // cy.get('[name^="DOB_Month"]').select('JAN')
 
         // by using value
-        cy.get('[name^="DOB_Month"]').select('01').should('have.text', 'Full Name')
-
+        cy.get('[name^="DOB_Month"]').select('01').should('have.value', '01')
+        cy.get('[name^="DOB_Month"] [value="02"]').should('have.text', 'FEB')
+        cy.pause()
         //  by using index
         cy.get('[name^="DOB_Month"]').select(2)
 
